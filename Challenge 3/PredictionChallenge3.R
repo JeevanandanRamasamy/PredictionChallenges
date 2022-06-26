@@ -1,7 +1,7 @@
 library(ModelMetrics)
 
 # Exploring the data
-training <- read.csv('Earnings_Train2022-1.csv')
+training <- read.csv('train.csv')
 plot(Earnings ~ GPA, data = training)
 plot(Earnings ~ Number_Of_Professional_Connections, data = training)
 plot(Earnings ~ Graduation_Year, data = training[training$Major == 'Buisness', ])
@@ -53,9 +53,9 @@ pred[training$Major == 'Vocational'] <- vocational.pred
 mse(training$Earnings, pred)
 
 # Applying the model to the testing data
-testing <- read.csv('Earnings_Test_Students-1.csv')
+testing <- read.csv('test.csv')
 testing$Number_Of_Professional_Connections2 <- testing$Number_Of_Professional_Connections^2
-submission <- read.csv('earning_submission.csv')
+submission <- read.csv('submission.csv')
 
 submission[testing$Major == 'Buisness' & testing$Graduation_Year %% 2 == 0, ]$Earnings <- 
           predict(business.model.even, newdata = testing[testing$Major == 'Buisness' 
@@ -74,4 +74,4 @@ submission[testing$Major == 'STEM', ]$Earnings <- predict(stem.model,
 submission[testing$Major == 'Vocational', ]$Earnings <- predict(vocational.model, 
            newdata = testing[testing$Major == 'Vocational', ])
 
-write.csv(submission, 'earning_submission.csv', row.names = FALSE)
+write.csv(submission, 'submission.csv', row.names = FALSE)
