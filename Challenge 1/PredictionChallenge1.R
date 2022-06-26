@@ -1,4 +1,4 @@
-training <- read.csv('M2022train.csv')
+training <- read.csv('train.csv')
 
 # Exploring Data
 colors <- c('dodgerblue2', 'seagreen3', 'gold', 'darkorange', 'firebrick2', 'darkorchid')
@@ -46,8 +46,8 @@ error <- mean(training$Grade != myprediction$Grade)
 error
 
 # Applying Prediction Model to Testing Data for Submission
-testing <- read.csv('M2022testS.csv')
-submission <- read.csv('M2022submission.csv')
+testing <- read.csv('test.csv')
+submission <- read.csv('submission.csv')
 decision <- rep('F', nrow(testing))
 decision[testing$Seniority == 'Freshman'] <- 'D'
 decision[testing$Seniority == 'Freshman' & ((testing$Major == 'CS' & testing$Score >= 50)
@@ -79,4 +79,4 @@ decision[testing$Seniority != 'Freshman' & ((testing$Major == 'CS' & testing$Sco
                                             | (testing$Major == 'Psychology' & testing$Score >= 71)
                                             | (testing$Major == 'Statistics' & testing$Score >= 87))] <- 'A'
 submission$Grade <- decision
-write.csv(submission, 'M2022submission.csv', row.names = FALSE)
+write.csv(submission, 'submission.csv', row.names = FALSE)
