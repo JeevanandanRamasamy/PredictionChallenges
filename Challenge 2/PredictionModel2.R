@@ -2,7 +2,7 @@ install.packages("devtools")
 devtools::install_github("devanshagr/CrossValidation")
 library(rpart)
 library(rpart.plot)
-training <- read.csv('M2022train.csv')
+training <- read.csv('train.csv')
 
 # Training the model using the training data
 CS.Fresh.tree <- rpart(Grade ~ Score, data = 
@@ -63,8 +63,8 @@ CrossValidation::cross_validate(training[training$Seniority != 'Freshman'
 Stat.Other.tree
 
 # Applying the model to the testing data
-testing <- read.csv('M2022testS.csv')
-submission <- read.csv('M2022submission2.csv')
+testing <- read.csv('test.csv')
+submission <- read.csv('submission.csv')
 submission[testing$Seniority == 'Freshman' & testing$Major == 'CS', ]$Grade <- 
           as.character(predict(CS.Fresh.tree, type = 'class',
           newdata = testing[testing$Seniority == 'Freshman' & testing$Major == 'CS', ]))
@@ -89,4 +89,4 @@ submission[testing$Seniority != 'Freshman' & testing$Major == 'Psychology', ]$Gr
 submission[testing$Seniority != 'Freshman' & testing$Major == 'Statistics', ]$Grade <- 
           as.character(predict(Stat.Other.tree, type = 'class',
           newdata = testing[testing$Seniority != 'Freshman' & testing$Major == 'Statistics', ]))
-write.csv(submission, 'M2022submission2.csv', row.names = FALSE)
+write.csv(submission, 'submission.csv', row.names = FALSE)
