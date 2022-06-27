@@ -36,4 +36,4 @@ Prediction: student's earnings after graduation
 
 I used linear regression after partitioning the data into categories. I found that some variables affected the student's earnings in certain cases and other variables determined the earnings in other cases. Some variables did not have any effect on the earnings at all.
 
-I placed 2nd out of 192 students in our class for this challenge with a mean square error of 90.850861
+I placed 2nd out of 192 students in our class for this challenge with a mean square error of 90.850861.
