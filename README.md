@@ -1,6 +1,6 @@
 # PredictionChallenges
 
-These are my prediction models for Prediction Challenges in Data Literacy course.
+These are my prediction models for the Prediction Challenges in Data Literacy course. I placed 1st out of 276 students in my class for having the least error in my predictions.
 
 ## Challenge 1
 
