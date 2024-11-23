@@ -1,6 +1,6 @@
 # PredictionChallenges
 
-This repository contains my solutions to the **Prediction Challenges** from the Data Literacy course. The challenges involved developing models to predict various outcomes based on provided datasets. My predictions achieved top rankings, including **1st place out of 276 students overall** for having the lowest prediction error.
+This repository contains my solutions to the **Rutgers Data League** Prediction Challenge. The challenges involved developing models to predict various outcomes based on provided datasets. My predictions achieved top rankings, including **1st place out of 276 students overall** for having the lowest prediction error.
 
 ---
 
