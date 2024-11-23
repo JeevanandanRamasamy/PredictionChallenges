@@ -1,39 +1,87 @@
 # PredictionChallenges
 
-These are my prediction models for the Prediction Challenges in Data Literacy course. I placed 1st out of 276 students in my class for having the least error in my predictions.
+This repository contains my solutions to the **Prediction Challenges** from the Data Literacy course. The challenges involved developing models to predict various outcomes based on provided datasets. My predictions achieved top rankings, including **1st place out of 276 students overall** for having the lowest prediction error.
 
-## Challenge 1
+---
 
-Link: https://www.kaggle.com/competitions/predictive-challenge-1-2022
+## Challenge 1: Predicting Student Grades (No ML Allowed)
 
-Given: student's major, seniority, and score
+**Challenge Link:** [Kaggle Competition - Predictive Challenge 1](https://www.kaggle.com/competitions/predictive-challenge-1-2022)  
 
-Prediction: student's grade
+### **Problem Description**
+- **Given:**  
+  - Student's major  
+  - Seniority level  
+  - Score  
+- **Goal:** Predict the student's grade.  
 
-In this challenge, we could not use machine learning models for our predictions. After analyzing the data by categorizing each entry, I created cutoffs for each category. I had to extend ranges where there was not enough data in order to cover all possible values.
+### **Solution**
+Machine learning models were not allowed for this challenge. After analyzing the dataset, I categorized entries and developed cutoff ranges for each category. In cases with insufficient data, I extended ranges to ensure all possible values were covered.  
 
-I placed 1st out of 218 students in our class for this challenge with an accuracy of 92.3%
+### **Results**
+- **Accuracy:** 92.3%  
+- **Rank:** 1st out of 218 students.  
 
-## Challenge 2
+---
 
-Link: https://www.kaggle.com/competitions/predictive-challenge-2-2022
+## Challenge 2: Predicting Student Grades (ML Models Allowed)
 
-Given: student's major, seniority, and score
+**Challenge Link:** [Kaggle Competition - Predictive Challenge 2](https://www.kaggle.com/competitions/predictive-challenge-2-2022)  
 
-Prediction: student's grade
+### **Problem Description**
+- **Given:**  
+  - Student's major  
+  - Seniority level  
+  - Score  
+- **Goal:** Predict the student's grade.  
 
-In this challenge, we could use machine learning models for our predictions. I used multiple decision trees on the categories I previously made to predict the grades.
+### **Solution**
+With machine learning models allowed, I built a solution using multiple decision trees. These models were based on the categories I developed in Challenge 1, enabling precise predictions tailored to each group.  
 
-I placed 1st out of 212 students in our class for this challenge with an accuracy of 92.3%
+### **Results**
+- **Accuracy:** 92.3%  
+- **Rank:** 1st out of 212 students.  
 
-## Challenge 3
+---
 
-Link: https://www.kaggle.com/competitions/predictive-challenge-3-2022
+## Challenge 3: Predicting Student Earnings After Graduation
 
-Given: student's GPA, number of professional connections, major, graduation year, number of credits, number of parking tickets
+**Challenge Link:** [Kaggle Competition - Predictive Challenge 3](https://www.kaggle.com/competitions/predictive-challenge-3-2022)  
 
-Prediction: student's earnings after graduation
+### **Problem Description**
+- **Given:**  
+  - Student's GPA  
+  - Number of professional connections  
+  - Major  
+  - Graduation year  
+  - Number of credits  
+  - Number of parking tickets  
+- **Goal:** Predict the student's earnings after graduation.  
 
-I used linear regression after partitioning the data into categories. I found that some variables affected the student's earnings in certain cases and other variables determined the earnings in other cases. Some variables did not have any effect on the earnings at all.
+### **Solution**
+I used a linear regression model after partitioning the data into categories. My analysis revealed that certain variables influenced earnings differently depending on the context, while other variables had no measurable effect. This insight guided the development of my predictive model.  
 
-I placed 2nd out of 192 students in our class for this challenge with a mean square error of 90.850861.
+### **Results**
+- **Mean Squared Error:** 90.850861  
+- **Rank:** 2nd out of 192 students.  
+
+---
+
+## Achievements
+
+- **Overall Performance:**  
+  - Placed 1st among 276 students for having the least error across all challenges.  
+- **Challenge-Specific Rankings:**  
+  - 1st place in Challenges 1 and 2.  
+  - 2nd place in Challenge 3.  
+
+---
+
+## Repository Contents
+
+- **Challenge1/**  
+  Code and data analysis for Challenge 1.  
+- **Challenge2/**  
+  Machine learning implementation and models for Challenge 2.  
+- **Challenge3/**  
+  Linear regression model and analysis for Challenge 3.  
